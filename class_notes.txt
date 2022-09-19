@@ -12,19 +12,20 @@
 
 > a tecnica em si: 
 
-E(entre i=0 a n) 2^i {+ 2^(n+1)} = 2^0 + E(entre i=0 a n) 2^(i+1)
-E(entre i=0 a n) 2^i + 2^(n+1) = 2^0 + E(entre i=0 a n) 2*2^i
-E(entre i=0 a n) 2^i + 2^(k+1) = 2^0 + 2E(entre i=0 a n)2^i
-2^(n+1) - 1 = 2E(entre i=0 a n)2^i - E(entre i=0 a n)2^i
-Logo,
-  2^(n+1) - 1 = E(entre i=0 a n)2^i
-  E(entre i=0 a n)2^i = 2^(n+1) - 1
+  E(entre i=0 a n) 2^i        { + 2^(n+1) }        =  2^0 + E(entre i=0 a n) 2^(i+1)
+
+  E(entre i=0 a n) 2^i + 2^(n+1) = 2^0 + E(entre i=0 a n) 2*2^i
+  E(entre i=0 a n) 2^i + 2^(k+1) = 2^0 + 2E(entre i=0 a n)2^i
+  2^(n+1) - 1 = 2E(entre i=0 a n)2^i - E(entre i=0 a n)2^i
+  Logo,
+    2^(n+1) - 1 = E(entre i=0 a n)2^i
+    E(entre i=0 a n)2^i = 2^(n+1) - 1
 
 
 > propriedade de Somatórios:
   
   E(entre i=0 e n) ca(i) = cE(entre i=0 e n) a(i) 
-    [o resto esta nos slides do professor (associativa e comutativa) ]
+                                                                   [o resto esta nos slides do professor (associativa e comutativa) ]
     
 > PROVA:
   
@@ -38,10 +39,10 @@ Logo,
     E(entre i=0 a n+1) 2^i = 2^(n+2)-1
     E(entre i=0 a n)2^i + 2^(n+1) = 2^(n+2) - 1
     
-    2^(n+1) [terminar]
+    2^(n+1)                                                         [terminar]
     
       
-> Exercicio proposto:
+> Exercicio proposto:                                               [terminar]
   E(entre i=0 a n) i*(2^(i))
   
   E(entre i=0 a n) i*(2^(i)) + (n+1)*2^(n+1) = 0*2^0 + E(entre i=0 a n) (i+1)*(2^(i+1))
