@@ -1,6 +1,25 @@
 tecnica da perturbação:
+
+>notações:
+
   E = notação de somatorio
 
- a tecnica esta entre {}
+  a tecnica esta entre {}
+  observações estao entre []
+
+
+> a tecnica em si: 
 
 E(entre i=0 a n) 2^i {+ 2^(n+1)} = 2^0 + E(entre i=0 a n) 2^(i+1)
+E(entre i=0 a n) 2^i + 2^(n+1) = 2^0 + E(entre i=0 a n) 2*2^i
+E(entre i=0 a n) 2^i + 2^(k+1) = 2^0 + 2E(entre i=0 a n)2^i
+2^(n+1) - 1 = 2E(entre i=0 a n)2^i - E(entre i=0 a n)2^i
+Logo,
+  2^(n+1) - 1 = E(entre i=0 a n)2^i
+  E(entre i=0 a n)2^i = 2^(n+1) - 1
+
+
+> propriedade de Somatórios:
+  E(entre i=0 e n) ca(i) = cE(entre i=0 e n) a(i) [o resto esta nos slides do professor]
+  
+  
