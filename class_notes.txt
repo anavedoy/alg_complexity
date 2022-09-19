@@ -1,0 +1,6 @@
+tecnica da perturbação:
+  E = notação de somatorio
+
+ a tecnica esta entre {}
+
+E(entre i=0 a n) 2^i {+ 2^(n+1)} = 2^0 + E(entre i=0 a n) 2^(i+1)
