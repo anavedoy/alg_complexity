@@ -1,6 +1,8 @@
-tecnica da perturbação:
+[19/09/2022]
 
->notações:
+--> tecnica da perturbação: <-- 
+
+> notações:
 
   E = notação de somatorio
 
@@ -20,6 +22,29 @@ Logo,
 
 
 > propriedade de Somatórios:
-  E(entre i=0 e n) ca(i) = cE(entre i=0 e n) a(i) [o resto esta nos slides do professor]
+  
+  E(entre i=0 e n) ca(i) = cE(entre i=0 e n) a(i) 
+    [o resto esta nos slides do professor (associativa e comutativa) ]
+    
+> PROVA:
+  
+  BASE: (n = 0)
+    E(entre i=0 a n)
+    1=1 [OK]
+    
+  PASSO INDUTIVO: (para n+1)
+    HIPOTESE(HI): E(entre i=0 a n)2^i = 2^(n+1) - 1
+    ---
+    E(entre i=0 a n+1) 2^i = 2^(n+2)-1
+    E(entre i=0 a n)2^i + 2^(n+1) = 2^(n+2) - 1
+    
+    2^(n+1) + 2^(n+1) = 2^(n+2) - 1
+    2 * 2^(n+1) = 2^(n) + 2^(1) + 2^(1)  - 1
+    2^(n+1) + 2^(n+1) = 2^(n+1) + 2 - 1
+    2^(n+1)  =  1
+    
+      
+> Exercicio proposto:
+  E(entre i=0 a n) i*(2^(i))
   
   
