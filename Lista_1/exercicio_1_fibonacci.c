@@ -8,17 +8,27 @@ unsigned int n = 40;
 
 
 
-void delay(int milliseconds)
+void delay(double milliseconds)
 {
     long pause;
     clock_t now,then;
 
-    pause = milliseconds*(CLOCKS_PER_SEC/1000);
-    now = then = clock();
-    while( (now-then) < pause )
-        now = clock();
+    pause = (double) milliseconds*(CLOCKS_PER_SEC/1000);
+    now = then = (double)clock();
+    
+    while( (now-then) < pause ) now = clock();
 }
 
+unsigned int fib_recursiva(unsigned int n){
+    
+    if (n < 2){
+        
+        delay(0.01);
+        return n;
+    }
+    
+    return fib_recursiva (n-2) + fib_recursiva (n-1);
+}
 
 
 
@@ -34,7 +44,7 @@ unsigned int fib_linear(unsigned int n){
         n_fib = a+b;        
         a=b;
         b=n_fib;
-        delay(1);
+        delay(0.01);
 
     }
 
@@ -49,25 +59,37 @@ int main(){
     f = fopen("tempos_por_n.csv", "w+");
 
     clock_t start_t, end_t;
-    double total_t;
+    double total_t_linear, total_t_recursiva;
 
-    unsigned int v[n];
+    unsigned int v_linear[n], v_recursiva[n];
 
-    fprintf(f, "tempo\n");
+    fprintf(f, "tempo_linear, tempo_recursiva\n");
+
     for(int i=0;i<n;i++){
 
         start_t = clock();
 
-        v[i] = fib_linear(i);
+        v_linear[i] = fib_linear(i);
 
         end_t = clock();
 
-        total_t = (double) ((end_t - start_t) / (CLOCKS_PER_SEC/100));
+        total_t_linear = (double) ((end_t - start_t) / (CLOCKS_PER_SEC/100));
+
+
+        start_t = clock();
+
+        v_recursiva[i] = fib_recursiva(i);
+
+        end_t = clock();
+
+        total_t_recursiva = (double) ((end_t - start_t) / (CLOCKS_PER_SEC/100));
+
 
         fprintf(
             f,
-            "%f\n", 
-            total_t
+            "%f, %f\n", 
+            total_t_linear,
+            total_t_recursiva
         );
 
         
