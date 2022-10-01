@@ -4,7 +4,9 @@
 
 // imprimir os n primeiros numeros de Fibonacci
 
-unsigned int n = 40;
+unsigned int n = 45;
+
+double d = 0.001;
 
 
 
@@ -22,8 +24,6 @@ void delay(double milliseconds)
 unsigned int fib_recursiva(unsigned int n){
     
     if (n < 2){
-        
-        delay(0.01);
         return n;
     }
     
@@ -44,7 +44,7 @@ unsigned int fib_linear(unsigned int n){
         n_fib = a+b;        
         a=b;
         b=n_fib;
-        delay(0.01);
+        delay(d);
 
     }
 
